@@ -13,12 +13,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Download Artifact
-        uses: actions/download-artifact@master
         with:
+          persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          name: build
-          path: build
           fetch-depth: 0
 
       - name: Setup Node.js
