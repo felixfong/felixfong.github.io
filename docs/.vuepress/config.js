@@ -225,6 +225,7 @@ module.exports = {
                     children: [
                         '/blog/pages/211229105530.html',
                         '/blog/pages/47a507/',
+                        '/blog/pages/dd027d/',
                     ],
                 },
             ],
