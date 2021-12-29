@@ -9,17 +9,24 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# 如果是发布到自定义域名
-# echo 'www.yourwebsite.com' > CNAME
+# deploy to github pages
+# echo 'eryajf.net' > CNAME
+
+# cat CNAME
+
+if [ -z "$GITHUB_TOKEN" ]; then
+  msg='deploy'
+  githubUrl=git@github.com:felixfong/felixfong.github.io.git
+else
+  Date=`date '+%Y%m%d%H%M%S'`
+  echo $Date
+  msg='GitHub Actions Deploy'
+  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
+  git config --global user.name "felixfong"
+  git config --global user.email "2898687306@qq.com"
+fi
 
 git init
 git add -A
-git commit -m 'deploy'
-
-# 如果你想要部署到 https://USERNAME.github.io
-git push -f git@github.com:felixfong/felixfong.github.io.git master
-
-# 如果发布到 https://USERNAME.github.io/<REPO>  REPO=github上的项目
-# git push -f git@github.com:USERNAME/<REPO>.git master:gh-pages
-
-cd -
+git commit -m "${msg}"
+git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支

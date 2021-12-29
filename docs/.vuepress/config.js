@@ -3,6 +3,7 @@ module.exports = {
     lang: 'zh-CN',
     title: 'Memo',
     description: '这是我的第一个 VuePress 站点',
+    base: './',
     head: [
         [
             'link',
@@ -16,7 +17,7 @@ module.exports = {
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
-        home: '/',
+        home: './',
         navbar: [
             { text: '首页', link: '/' },
             { text: '专题',link: '/topic/',
@@ -58,14 +59,9 @@ module.exports = {
                     { text: 'Other', link: '/ops/pages/285.html'},
                 ]
             },
-            { text: '生活',link: '/life/',
+            { text: '博客',link: '/blog/',
                 children: [
-                    { text: '随写编年', link: '/pages/2714.html'},
-                    { text: '家人物语', link: '/pages/2442.html'},
-                    { text: '父亲的朋友圈', link: '/pages/3993f9/'},
-                    { text: '电影音乐', link: '/pages/184.html'},
-                    { text: '效率工具', link: '/pages/136.html'},
-                    { text: '博客相关', link: '/pages/844.html'},
+                    { text: '博客相关', link: '/blog/pages/211229105530.html'},
                 ]
             },
         ],
@@ -220,6 +216,15 @@ module.exports = {
                     text: '迎刃而解',
                     children: [
                         '/ops/pages/29.html',
+                    ],
+                },
+            ],
+            '/blog/': [
+                {
+                    text: '博客',
+                    children: [
+                        '/blog/pages/211229105530.html',
+                        '/blog/pages/47a507/',
                     ],
                 },
             ],
