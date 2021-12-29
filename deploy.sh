@@ -11,20 +11,21 @@ cd docs/.vuepress/dist
 
 # deploy to github pages
 # echo 'eryajf.net' > CNAME
+# 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
 
 # cat CNAME
 
-#if [ -z "$GITHUB_TOKEN" ]; then
+if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
   githubUrl=git@github.com:felixfong/felixfong.github.io.git
-#else
-#  Date=`date '+%Y%m%d%H%M%S'`
-#  echo $Date
-#  msg='GitHub Actions Deploy'
-#  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
-#  git config --global user.name "felixfong"
-#  git config --global user.email "2898687306@qq.com"
-#fi
+else
+  Date=`date '+%Y%m%d%H%M%S'`
+  echo $Date
+  msg='GitHub Actions Deploy'
+  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
+  git config --global user.name "felixfong"
+  git config --global user.email "2898687306@qq.com"
+fi
 
 git init
 git add -A
