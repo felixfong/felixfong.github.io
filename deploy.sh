@@ -25,12 +25,15 @@ else
   echo $msg
   githubUrl=git@github.com:felixfong/felixfong.github.io.git
 #  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
-#  git config --global user.email "2898687306@qq.com"
-#  git config --global user.name "felixfong"
+  git config --global user.email "2898687306@qq.com"
+  git config --global user.name "felixfong"
 fi
 
 
 git init
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git remote rm origin
+git remote add origin git@github.com:felixfong/felixfong.github.io.git
+git push -u origin gh-pages
+#git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
