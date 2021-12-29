@@ -17,18 +17,15 @@ cd docs/.vuepress/dist
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
   echo $msg
-  echo '111111111'
   githubUrl=git@github.com:felixfong/felixfong.github.io.git
 else
   Date=`date '+%Y%m%d%H%M%S'`
   echo $Date
   msg='GitHub Actions Deploy'
   echo $msg
-  echo '22222222'
-  echo ${GITHUB_TOKEN}
-#  githubUrl=git@github.com:felixfong/felixfong.github.io.git
   githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
   git config --global user.email "2898687306@qq.com"
+  git config --global user.name "felixfong"
 fi
 
 
