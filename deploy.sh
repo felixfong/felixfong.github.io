@@ -23,9 +23,10 @@ else
   echo $Date
   msg='GitHub Actions Deploy'
   echo $msg
-  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
-  git config --global user.email "2898687306@qq.com"
-  git config --global user.name "felixfong"
+  githubUrl=git@github.com:felixfong/felixfong.github.io.git
+#  githubUrl=https://felixfong:${GITHUB_TOKEN}@github.com/felixfong/felixfong.github.io.git
+#  git config --global user.email "2898687306@qq.com"
+#  git config --global user.name "felixfong"
 fi
 
 
