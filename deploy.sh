@@ -11,7 +11,6 @@ cd docs/.vuepress/dist
 
 # deploy to github pages
 # echo 'eryajf.net' > CNAME
-# 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
 
 # cat CNAME
 
