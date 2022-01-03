@@ -31,6 +31,7 @@ module.exports = {
             { text: '周刊', link: '/weekly/',
                 children: [
                     { text: '2021', link: '/weekly/pages/11c668/'},
+                    { text: '2022', link: '/weekly/pages/220103181312/'},
                 ]
             },
             { text: '编程',link: '/code/',
@@ -143,7 +144,7 @@ module.exports = {
                     children: [
                         '/weekly/pages/11c668/',
                         '/weekly/pages/211225232834/',
-                        '/code/pages/220103181312.html'
+                        '/weekly/pages/220103181312/'
                     ],
                 },
             ],
