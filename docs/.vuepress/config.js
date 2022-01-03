@@ -9,7 +9,7 @@ module.exports = {
             'link',
             {
                 rel: 'icon',
-                href: `/img/memo-favicon.ico`,
+                href: '/img/memo-favicon.ico',
             },
         ],
     ],
@@ -143,6 +143,7 @@ module.exports = {
                     children: [
                         '/weekly/pages/11c668/',
                         '/weekly/pages/211225232834/',
+                        '/code/pages/220103181312.html'
                     ],
                 },
             ],
