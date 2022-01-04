@@ -26,6 +26,8 @@ module.exports = {
                     { text: 'K8S', link: '/topic/pages/1742.html'},
                     { text: 'Nexus', link: '/topic/pages/45c5da/'},
                     { text: 'Jenkins', link: '/topic/pages/2415.html'},
+                    { text: 'Go', link: '/topic/pages/220101204130/'},
+                    { text: '网络', link: '/topic/pages/22020104155458/'},
                 ]
             },
             { text: '周刊', link: '/weekly/',
@@ -133,6 +135,19 @@ module.exports = {
                             text: 'K8S',
                             children: [
                                 '/topic/pages/1742.html',
+                            ],
+                        },
+                        {
+                            text: 'Go',
+                            children: [
+                                '/topic/pages/220101204130/',
+                                '/topic/pages/211231234959/'
+                            ],
+                        },
+                        {
+                            text: '网络专题',
+                            children: [
+                                '/topic/pages/22020104155458/',
                             ],
                         },
                     ],
