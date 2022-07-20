@@ -148,6 +148,7 @@ module.exports = {
                             text: '网络专题',
                             children: [
                                 '/topic/pages/22020104155458/',
+                                'topic/pages/202207201615/'
                             ],
                         },
                     ],
