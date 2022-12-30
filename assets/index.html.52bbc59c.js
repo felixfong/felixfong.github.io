@@ -1,0 +1,9 @@
+import{e as n}from"./app.dbf5d933.js";import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";const a={},s=n(`<h2 id="_0-\u7F51\u7EDC\u534F\u8BAE\u5206\u5C42\u7ED3\u6784" tabindex="-1"><a class="header-anchor" href="#_0-\u7F51\u7EDC\u534F\u8BAE\u5206\u5C42\u7ED3\u6784" aria-hidden="true">#</a> 0. \u7F51\u7EDC\u534F\u8BAE\u5206\u5C42\u7ED3\u6784</h2><div class="language-html ext-html line-numbers-mode"><pre class="language-html"><code>\u7591\u60D1\uFF1A
+    1. \u4E3A\u4EC0\u4E48\u9700\u8981\u6709\u7F51\u7EDC\u534F\u8BAE
+    2. \u7F51\u7EDC\u534F\u8BAE\u4E3A\u4EC0\u4E48\u5206\u5C42
+    3. \u6BCF\u4E00\u5C42\u7F51\u7EDC\u534F\u8BAE\u7684\u804C\u8D23
+\u89E3\u7B54\uFF1A
+    1. \u4EC5\u5355\u4E2A\u8BBE\u5907\u4E2D\u8FDB\u7A0B\u901A\u4FE1\u53EF\u4EE5\u901A\u8FC7\u7BA1\u9053\u3001\u5171\u4EAB\u5185\u5B58\u3001\u6D88\u606F\u961F\u5217\u3001\u4FE1\u53F7\u7B49\u65B9\u5F0F\uFF0C
+\u4F46\u5BF9\u4E8E\u591A\u4E2A\u4E0D\u540C\u8BBE\u5907\u4E0A\u7684\u8FDB\u7A0B\u95F4\u901A\u4FE1\uFF0C\u5C31\u9700\u8981\u7F51\u7EDC\u901A\u4FE1\uFF0C\u7136\u800C\u8BBE\u5907\u662F\u591A\u6837\u5316\u7684\uFF0C\u56E0\u6B64\u9700\u8981\u4E00\u5957\u901A\u7528\u7684\u7F51\u7EDC\u534F\u8BAE\u6765\u517C\u5BB9\u7EA6\u5B9A\u591A\u8BBE\u5907\u7684\u5F00\u53D1\u3002
+    2. 
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_1-\u5E94\u7528\u5C42" tabindex="-1"><a class="header-anchor" href="#_1-\u5E94\u7528\u5C42" aria-hidden="true">#</a> 1. \u5E94\u7528\u5C42</h2>`,3);function r(l,c){return s}var p=e(a,[["render",r]]);export{p as default};

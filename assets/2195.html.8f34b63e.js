@@ -1,0 +1,15 @@
+import{e as s}from"./app.dbf5d933.js";import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";const e={},a=s(`<p>kubernetes master \u8282\u70B9\u8FD0\u884C\u5982\u4E0B\u7EC4\u4EF6\uFF1A</p><ul><li>kube-apiserver</li><li>kube-scheduler</li><li>kube-controller-manager</li></ul><p>kube-scheduler \u548C kube-controller-manager \u53EF\u4EE5\u4EE5\u96C6\u7FA4\u6A21\u5F0F\u8FD0\u884C\uFF0C\u901A\u8FC7 leader \u9009\u4E3E\u4EA7\u751F\u4E00\u4E2A\u5DE5\u4F5C\u8FDB\u7A0B\uFF0C\u5176\u5B83\u8FDB\u7A0B\u5904\u4E8E\u963B\u585E\u6A21\u5F0F\u3002</p><p>\u5BF9\u4E8E kube-apiserver\uFF0C\u53EF\u4EE5\u8FD0\u884C\u591A\u4E2A\u5B9E\u4F8B\uFF08\u672C\u6587\u6863\u662F 3 \u5B9E\u4F8B\uFF09\uFF0C\u4F46\u5BF9\u5176\u5B83\u7EC4\u4EF6\u9700\u8981\u63D0\u4F9B\u7EDF\u4E00\u7684\u8BBF\u95EE\u5730\u5740\uFF0C\u8BE5\u5730\u5740\u9700\u8981\u9AD8\u53EF\u7528\u3002\u672C\u6587\u6863\u4F7F\u7528 keepalived \u548C haproxy \u5B9E\u73B0 kube-apiserver VIP \u9AD8\u53EF\u7528\u548C\u8D1F\u8F7D\u5747\u8861\u3002</p><h2 id="_1-\u4E0B\u8F7D\u6700\u65B0\u7248\u672C\u7684\u4E8C\u8FDB\u5236\u6587\u4EF6" tabindex="-1"><a class="header-anchor" href="#_1-\u4E0B\u8F7D\u6700\u65B0\u7248\u672C\u7684\u4E8C\u8FDB\u5236\u6587\u4EF6" aria-hidden="true">#</a> 1\uFF0C\u4E0B\u8F7D\u6700\u65B0\u7248\u672C\u7684\u4E8C\u8FDB\u5236\u6587\u4EF6</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">wget</span> https://dl.k8s.io/v1.10.4/kubernetes-server-linux-amd64.tar.gz
+<span class="token function">tar</span> -xzvf kubernetes-server-linux-amd64.tar.gz
+<span class="token builtin class-name">cd</span> kubernetes
+<span class="token function">tar</span> -xzvf  kubernetes-src.tar.gz
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>\u5C06\u4E8C\u8FDB\u5236\u6587\u4EF6\u62F7\u8D1D\u5230\u6240\u6709 master \u8282\u70B9\uFF1A</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">cat</span> <span class="token operator">&gt;</span> magic.sh <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;EOF&quot;
+#!/bin/bash
+source /opt/k8s/bin/environment.sh
+for node_ip in \${NODE_IPS[@]}
+do
+    echo &quot;&gt;&gt;&gt; \${node_ip}&quot; 
+    scp server/bin/* k8s@\${node_ip}:/opt/k8s/bin/
+    ssh k8s@\${node_ip} &quot;chmod +x /opt/k8s/bin/*&quot;
+done
+EOF</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div>`,8);function r(p,l){return a}var c=n(e,[["render",r]]);export{c as default};

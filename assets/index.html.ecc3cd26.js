@@ -1,0 +1,3 @@
+import{e}from"./app.dbf5d933.js";import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";const s={},t=e(`<h3 id="_1-\u547D\u4EE4" tabindex="-1"><a class="header-anchor" href="#_1-\u547D\u4EE4" aria-hidden="true">#</a> 1. \u547D\u4EE4</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>\u5F53\u524D\u65F6\u95F4+10\u5929
+update poetries set date = date_sub(date, interval 10 day)
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div>`,2);function r(n,d){return t}var l=a(s,[["render",r]]);export{l as default};

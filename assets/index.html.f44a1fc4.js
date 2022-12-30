@@ -1,0 +1,6 @@
+import{e}from"./app.dbf5d933.js";import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";const a={},s=e(`<h2 id="_1-\u67E5\u770B\u516C\u7F51\u5730\u5740\u65B9\u6CD5" tabindex="-1"><a class="header-anchor" href="#_1-\u67E5\u770B\u516C\u7F51\u5730\u5740\u65B9\u6CD5" aria-hidden="true">#</a> 1.\u67E5\u770B\u516C\u7F51\u5730\u5740\u65B9\u6CD5</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>1. curl ifconfig.me
+2. curl ipinfo.io/json
+3. wget http://ipecho.net/plain -O - -q ; echo
+4. wget http://observebox.com/ip -O - -q ; echo
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_2-\u67E5\u770B\u5185\u7F51\u5730\u5740\u65B9\u6CD5" tabindex="-1"><a class="header-anchor" href="#_2-\u67E5\u770B\u5185\u7F51\u5730\u5740\u65B9\u6CD5" aria-hidden="true">#</a> 2. \u67E5\u770B\u5185\u7F51\u5730\u5740\u65B9\u6CD5</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ifconfig
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div>`,4);function r(i,t){return s}var l=n(a,[["render",r]]);export{l as default};

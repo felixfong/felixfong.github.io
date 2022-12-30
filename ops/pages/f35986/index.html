@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.29">
+    <link rel="icon" href="/img/memo-favicon.ico"><title>使用yum-remi部署PHP及其依赖 | Memo</title><meta name="description" content="这是我的第一个 VuePress 站点">
+    <link rel="modulepreload" href="./assets/app.dbf5d933.js"><link rel="modulepreload" href="./assets/index.html.d7dbfaf1.js"><link rel="modulepreload" href="./assets/plugin-vue_export-helper.21dcd24c.js"><link rel="modulepreload" href="./assets/index.html.a6e3af5b.js">
+    <link rel="stylesheet" href="./assets/style.9ca9d938.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a aria-current="page" href="/./ops/pages/f35986/" class="router-link-active router-link-exact-active"><!----><span class="site-name can-hide">Memo</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/./" class="nav-link" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="专题"><span class="title">专题</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="专题"><span class="title">专题</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./topic/pages/2351.html" class="nav-link" aria-label="ELK"><!--[--><!--]--> ELK <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/1742.html" class="nav-link" aria-label="K8S"><!--[--><!--]--> K8S <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/45c5da/" class="nav-link" aria-label="Nexus"><!--[--><!--]--> Nexus <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/2415.html" class="nav-link" aria-label="Jenkins"><!--[--><!--]--> Jenkins <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/220101204130/" class="nav-link" aria-label="Go"><!--[--><!--]--> Go <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/22020104155458/" class="nav-link" aria-label="网络"><!--[--><!--]--> 网络 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="周刊"><span class="title">周刊</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="周刊"><span class="title">周刊</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./weekly/pages/11c668/" class="nav-link" aria-label="2021"><!--[--><!--]--> 2021 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./weekly/pages/220103181312/" class="nav-link" aria-label="2022"><!--[--><!--]--> 2022 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="编程"><span class="title">编程</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="编程"><span class="title">编程</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./code/pages/aeab08/" class="nav-link" aria-label="Golang"><!--[--><!--]--> Golang <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./code/pages/5164.html" class="nav-link" aria-label="Vue"><!--[--><!--]--> Vue <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./code/pages/531.html" class="nav-link" aria-label="Shell"><!--[--><!--]--> Shell <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="运维"><span class="title">运维</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="运维"><span class="title">运维</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./ops/pages/027a17/" class="nav-link" aria-label="最佳实践"><!--[--><!--]--> 最佳实践 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/29.html" class="nav-link" aria-label="迎刃而解"><!--[--><!--]--> 迎刃而解 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/930.html" class="nav-link" aria-label="Nginx"><!--[--><!--]--> Nginx <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2782.html" class="nav-link" aria-label="Php"><!--[--><!--]--> Php <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/596.html" class="nav-link" aria-label="Zabbix"><!--[--><!--]--> Zabbix <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2468.html" class="nav-link" aria-label="Prometheus"><!--[--><!--]--> Prometheus <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5380.html" class="nav-link" aria-label="Grafana"><!--[--><!--]--> Grafana <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5279.html" class="nav-link" aria-label="CentOS"><!--[--><!--]--> CentOS <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/1847.html" class="nav-link" aria-label="Docker"><!--[--><!--]--> Docker <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5173.html" class="nav-link" aria-label="Ansible"><!--[--><!--]--> Ansible <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/3410.html" class="nav-link" aria-label="Ldap"><!--[--><!--]--> Ldap <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/202208241125/" class="nav-link" aria-label="Git"><!--[--><!--]--> Git <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2951.html" class="nav-link" aria-label="Kafka"><!--[--><!--]--> Kafka <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/202209081510" class="nav-link" aria-label="MySQL"><!--[--><!--]--> MySQL <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/4050.html" class="nav-link" aria-label="Etcd"><!--[--><!--]--> Etcd <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/285.html" class="nav-link" aria-label="Other"><!--[--><!--]--> Other <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="博客"><span class="title">博客</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="博客"><span class="title">博客</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./blog/pages/211229105530.html" class="nav-link" aria-label="博客相关"><!--[--><!--]--> 博客相关 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/eryajf/eryajf.github.io" rel="noopener noreferrer" target="_blank" aria-label="Github"><!--[--><!--]--> Github <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="切换夜间模式"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><div id="docsearch-container"></div></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/./" class="nav-link" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="专题"><span class="title">专题</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="专题"><span class="title">专题</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./topic/pages/2351.html" class="nav-link" aria-label="ELK"><!--[--><!--]--> ELK <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/1742.html" class="nav-link" aria-label="K8S"><!--[--><!--]--> K8S <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/45c5da/" class="nav-link" aria-label="Nexus"><!--[--><!--]--> Nexus <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/2415.html" class="nav-link" aria-label="Jenkins"><!--[--><!--]--> Jenkins <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/220101204130/" class="nav-link" aria-label="Go"><!--[--><!--]--> Go <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./topic/pages/22020104155458/" class="nav-link" aria-label="网络"><!--[--><!--]--> 网络 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="周刊"><span class="title">周刊</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="周刊"><span class="title">周刊</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./weekly/pages/11c668/" class="nav-link" aria-label="2021"><!--[--><!--]--> 2021 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./weekly/pages/220103181312/" class="nav-link" aria-label="2022"><!--[--><!--]--> 2022 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="编程"><span class="title">编程</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="编程"><span class="title">编程</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./code/pages/aeab08/" class="nav-link" aria-label="Golang"><!--[--><!--]--> Golang <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./code/pages/5164.html" class="nav-link" aria-label="Vue"><!--[--><!--]--> Vue <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./code/pages/531.html" class="nav-link" aria-label="Shell"><!--[--><!--]--> Shell <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="运维"><span class="title">运维</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="运维"><span class="title">运维</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./ops/pages/027a17/" class="nav-link" aria-label="最佳实践"><!--[--><!--]--> 最佳实践 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/29.html" class="nav-link" aria-label="迎刃而解"><!--[--><!--]--> 迎刃而解 <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/930.html" class="nav-link" aria-label="Nginx"><!--[--><!--]--> Nginx <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2782.html" class="nav-link" aria-label="Php"><!--[--><!--]--> Php <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/596.html" class="nav-link" aria-label="Zabbix"><!--[--><!--]--> Zabbix <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2468.html" class="nav-link" aria-label="Prometheus"><!--[--><!--]--> Prometheus <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5380.html" class="nav-link" aria-label="Grafana"><!--[--><!--]--> Grafana <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5279.html" class="nav-link" aria-label="CentOS"><!--[--><!--]--> CentOS <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/1847.html" class="nav-link" aria-label="Docker"><!--[--><!--]--> Docker <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/5173.html" class="nav-link" aria-label="Ansible"><!--[--><!--]--> Ansible <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/3410.html" class="nav-link" aria-label="Ldap"><!--[--><!--]--> Ldap <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/202208241125/" class="nav-link" aria-label="Git"><!--[--><!--]--> Git <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/2951.html" class="nav-link" aria-label="Kafka"><!--[--><!--]--> Kafka <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/202209081510" class="nav-link" aria-label="MySQL"><!--[--><!--]--> MySQL <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/4050.html" class="nav-link" aria-label="Etcd"><!--[--><!--]--> Etcd <!--[--><!--]--></a></li><li class="dropdown-item"><a href="/./ops/pages/285.html" class="nav-link" aria-label="Other"><!--[--><!--]--> Other <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="博客"><span class="title">博客</span><span class="arrow down"></span></button><button class="mobile-dropdown-title" type="button" aria-label="博客"><span class="title">博客</span><span class="right arrow"></span></button><!--[--><ul style="display:none;" class="nav-dropdown"><!--[--><li class="dropdown-item"><a href="/./blog/pages/211229105530.html" class="nav-link" aria-label="博客相关"><!--[--><!--]--> 博客相关 <!--[--><!--]--></a></li><!--]--></ul><!--]--></div></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/eryajf/eryajf.github.io" rel="noopener noreferrer" target="_blank" aria-label="Github"><!--[--><!--]--> Github <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--[--><p class="sidebar-heading sidebar-item">最佳实践</p><ul class=""><li><!--[--><a href="/./ops/pages/211225215940/" class="nav-link sidebar-item" aria-label="常见问题及处理方案"><!--[--><!--]--> 常见问题及处理方案 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/./ops/pages/202208241125/" class="nav-link sidebar-item" aria-label="Git代码提交时，报PermissionDenied解决方案"><!--[--><!--]--> Git代码提交时，报PermissionDenied解决方案 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/./ops/pages/1497.html" class="nav-link sidebar-item" aria-label="MySQL数据库增量备份的操作"><!--[--><!--]--> MySQL数据库增量备份的操作 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/./ops/pages/5295.html" class="nav-link sidebar-item" aria-label="MySQL中order by的学习使用"><!--[--><!--]--> MySQL中order by的学习使用 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/./ops/pages/202209081510" class="nav-link sidebar-item" aria-label="MySQL批量修改时间的命令"><!--[--><!--]--> MySQL批量修改时间的命令 <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--><!--[--><p class="sidebar-heading sidebar-item">迎刃而解</p><ul class=""><li><!--[--><a href="/./ops/pages/29.html" class="nav-link sidebar-item" aria-label="记一次关于tomcat的踩坑的经历"><!--[--><!--]--> 记一次关于tomcat的踩坑的经历 <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h2 id="_1-历史" tabindex="-1"><a class="header-anchor" href="#_1-历史" aria-hidden="true">#</a> 1，历史</h2><p>以往PHP大多都是使用源码安装，或者使用自行封装成RPM包的姿势来进行安装。</p><ul><li>源码安装的优点是灵活性强，后期模块儿自定义添加调整都比较方便。</li><li>自行封装RPM初期工作比较费劲儿，不过梳理好当前生产所需的依赖模块儿之后，后期的标准化维护工作会轻松很多。</li></ul><p>不过这里依然遵循一个道理，也是我们接触互联网技术深入以来的一个体会：<code>有些技术或者事物看似简单，实际使用起来背后则隐藏着复杂，有些技术或者事物看似复杂，实际使用起来背后则体现着简单。</code></p><p>从中国古代的智慧来看，这叫<code>福祸相依</code>。</p><p>这一点在我们同时维护PHP以及golang项目的过程中，体会尤为深切，比如PHP属于解释性语言，常规部署方式是源码丢到服务器上，交给fpm解析，这给开发debug带来了不少便利，能够在不通过走提交代码，合并代码，走CICD流程的情况下直接修改源码来debug，但是，假如这个debug的调整会影响其他正在测试的同学呢，假如添加了调试代码而又忘记去掉了呢，我们这边可是不止一次遇到过这种问题，以至于我们不得不把服务器权限全部都收掉，彻底断掉开发者直接通过vim来调试代码的路径。对比而言，诸如golang或者Java，如果你觉得你提交的代码是有问题的，那么你就不得不在本地自行调试，然后运行起来看一下，再发布到测试去。因此，看起来能够高效开发迭代的PHP，事实上反而将开发者惯坏，从而经常提交了有问题的代码到测试环境去，而看起来老得编译验证的golang，类似这样的问题则少却很多。</p><p>话说回来，源码安装的优点是灵活性强，但是如果你有五十个PHP项目，它们的依赖各不一样，而且依赖添加的需求并不是同一时刻提出来的，于是经过两年的维护之下，这五十个项目的PHP环境则各不一样，很难梳理出一个统一的标准出来。自行封装RPM的一个问题在于，一些依赖如果要重新调整，比如基础包添加gd库的时候没有enable掉free-type，那么这个时候重新添加这个包就会成为一个大难题。</p><h2 id="_2-前言" tabindex="-1"><a class="header-anchor" href="#_2-前言" aria-hidden="true">#</a> 2，前言</h2><p>而今天要介绍的remi的方案，则是如上两种方式的折中方案，兼并两种方案的共同优点，值得推荐。</p><p><a href="https://rpms.remirepo.net/" target="_blank" rel="noopener noreferrer">Remi repository<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>是包含最新版本php和mysql包的linux源。</p><ul><li>它完全基于RPM包管理，不必再身陷各种编译难题中。</li><li>它可以像源码管理时添加依赖那样，使用yum命令就可以添加好对应的依赖。</li></ul><h2 id="_3-使用" tabindex="-1"><a class="header-anchor" href="#_3-使用" aria-hidden="true">#</a> 3，使用</h2><h3 id="_1-添加yum源" tabindex="-1"><a class="header-anchor" href="#_1-添加yum源" aria-hidden="true">#</a> 1，添加yum源</h3><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>yum <span class="token function">install</span> -y epel-release
+yum <span class="token function">install</span> -y https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/remi-release-7.rpm
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>此时可以看到多了不少源：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>$ ll /etc/yum.repos.d/
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">614</span> Aug  <span class="token number">4</span> <span class="token number">19</span>:50 CentOS-Base.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">230</span> Aug  <span class="token number">4</span> <span class="token number">19</span>:50 CentOS-Epel.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">616</span> Apr  <span class="token number">8</span>  <span class="token number">2020</span> CentOS-x86_64-kernel.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1050</span> Nov  <span class="token number">1</span>  <span class="token number">2020</span> epel.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1149</span> Nov  <span class="token number">1</span>  <span class="token number">2020</span> epel-testing.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">446</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-glpi91.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">446</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-glpi92.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">446</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-glpi93.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">446</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-glpi94.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">855</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-modular.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">456</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php54.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php70.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php71.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php72.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php73.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php74.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">1314</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-php80.repo
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">2605</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi.repo
+-rw-r--r-- <span class="token number">1</span> root root  <span class="token number">750</span> Jan  <span class="token number">5</span>  <span class="token number">2021</span> remi-safe.repo
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>这个时候，我们可以基于这个源拿到PHP各大版本中最后一个版本的RPM包及其依赖，使用如下命令能够看到所有的包：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>yum list <span class="token operator">|</span><span class="token function">egrep</span> <span class="token string">&#39;php70|php71|php72|php73|php74&#39;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>其中一些依赖这里整理如下：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>php74：安装PHP <span class="token number">7.4</span>的包
+php74-php：用于创建动态web的PHP脚本语言网站
+php74-build：基本的构建配置
+php74-php-gd：用于PHP应用程序使用gd的模块图形库
+php74-xhprof：一个用于PHP - Web接口的层次分析器
+php74-zephir：用于创建扩展的Zephir语言PHP：
+php74-php-ast：抽象语法树
+php74-php-cli：用于PHP的命令行接口
+php74-php-dba：一个用于PHP的数据库抽象层模块应用程序
+php74-php-dbg：交互式PHP调试器
+php74-php-ffi：外部函数接口
+php74-php-fpm：PHP FastCGI进程管理器
+php74-php-gmp：一个用于使用GNU的PHP应用程序模块议员库
+php74-php-lz4：x86_64: PHP的LZ4扩展
+php74-php-pdo：一个用于PHP的数据库访问抽象模块应用程序
+php74-php-xml：x86_64:用于使用XML的PHP应用程序的模块
+php74-runtime：处理php74软件集合的包：
+php74-php-imap：x86_64:用于使用IMAP的PHP应用程序的模块
+php74-php-intl：x86_64: PHP国际化扩展应用程序
+php74-php-json：x86_64: PHP的JavaScript对象符号扩展
+php74-php-ldap：x86_64:用于使用LDAP的PHP应用程序的模块
+php74-php-oci8：x86_64:用于使用OCI8的PHP应用程序的模块数据库
+php74-php-odbc：x86_64:用于使用ODBC的PHP应用程序的模块数据库
+php74-php-pear：noarch: PHP扩展和应用程序库框架
+php74-php-pggi：GTK绑定
+php74-php-snmp：一个用于PHP应用程序查询的模块SNMP-managed设备
+php74-php-soap：用于使用SOAP的PHP应用程序的模块协议
+php74-php-tidy：标准PHP模块提供了tidy库支持
+php74-php-zstd：x86_64: Zstandard扩展名
+php74-scldevel：x86_64:打包php74的开发文件
+php74-unit-php：用于NGINX单元的PHP模块
+php74-php-devel：构建PHP扩展所需的文件
+php74-php-pgsql：一个用于PHP的PostgreSQL数据库模块
+php74-php-pinba：x86_64: Pinba统计服务器的客户端扩展
+php74-php-bcmath：用于PHP应用程序的模块bcmath库
+php74-php-brotli：用于PHP的Brotli扩展
+php74-php-common：PHP的公共文件
+php74-php-pspell：x86_64:用于PHP应用程序的模块中接口
+php74-php-recode：用于PHP应用程序的模块重新编码库
+php74-php-snappy：PHP的Snappy扩展
+php74-php-sodium：x86_64:钠密码库的包装
+php74-php-sqlsrv：x86_64:用于SQL Server的PHP Microsoft驱动程序
+php74-php-xmlrpc：的PHP应用程序模块xml - rpc协议
+php74-php-enchant：增强PHP的拼写扩展应用程序
+php74-php-libvirt：用于Libvirt的PHP语言绑定
+php74-php-mysqlnd：x86_64:用于使用MySQL的PHP应用程序的模块数据库
+php74-php-opcache：x86_64: Zend OPcache
+php74-php-pecl-ds：x86_64: PHP的数据结构
+php74-php-pecl-ev：提供libev库的接口
+php74-php-pecl-pq：PostgreSQL客户端库<span class="token punctuation">(</span>libpq<span class="token punctuation">)</span>绑定
+php74-php-pecl-uv：Libuv包装器
+php74-php-process：用于PHP脚本的模块使用系统进程接口
+php74-php-embedded：用于嵌入应用程序的PHP库
+php74-php-mbstring：一个用于PHP应用程序的模块多字节字符串处理
+php74-php-pecl-dio：直接I/O函数
+php74-php-pecl-eio：提供libeio库的接口
+php74-php-pecl-env：加载环境变量
+php74-php-pecl-lua：嵌入式lua解释器
+php74-php-pecl-lzf：x86_64:处理LZF de/压缩的扩展
+php74-php-pecl-nsq：NSQ客户端的PHP扩展
+php74-php-pecl-psr：PSR接口
+php74-php-pecl-rar：用于读取RAR存档的PHP扩展
+php74-php-pecl-rrd：x86_64: rrdtool的PHP绑定
+php74-php-pecl-sdl：简单的PHP DirectMedia层
+php74-php-pecl-svn：x86_64: Subversion版本的PHP绑定控制系统
+php74-php-pecl-vld：x86_64:转储PHP的内部表示脚本
+php74-php-pecl-yac：无锁用户数据缓存
+php74-php-pecl-yaf：x86_64:又一个框架
+php74-php-pecl-yar：轻量级并发RPC框架
+php74-php-pecl-yaz：x86_64: Z39.50/SRU客户端
+php74-php-pecl-zip：一个ZIP文件的扩展名
+php74-php-pecl-zmq：ZeroMQ消息传递
+php74-php-phalcon4：Phalcon框架
+php74-php-componere：在运行时编写PHP类
+php74-php-litespeed：LiteSpeed Web服务器PHP支持
+php74-php-maxminddb：MaxMind DB Reader扩展
+php74-php-pdo-dblib：x86_64: PDO驱动程序，用于Microsoft SQL Server和Sybase数据库
+php74-php-pecl-amqp：与任何AMQP兼容的服务器通信
+php74-php-pecl-apcu：APC用户缓存
+php74-php-pecl-apfd：总是填充表单数据
+php74-php-pecl-fann：用于FANN库的包装器
+php74-php-pecl-grpc：x86_64:通用RPC框架
+php74-php-pecl-http：扩展的HTTP支持
+php74-php-pecl-krb5：Kerberos验证扩展
+php74-php-pecl-pcov：x86_64:代码覆盖驱动程序
+php74-php-pecl-ssh2：x86_64: libssh2库的绑定
+php74-php-pecl-sync：已命名和未命名同步对象
+php74-php-pecl-uopz：x86_64: Zend的用户操作
+php74-php-pecl-uuid：通用唯一标识符扩展对于PHP
+php74-php-pecl-vips：x86_64:与libvip接口的PHP扩展
+php74-php-pecl-wddx：Web分布式数据交换
+php74-php-pecl-yaml：x86_64: yaml的PHP绑定
+php74-php-phpiredis：x86_64: Redis的客户端扩展名
+php74-php-smbclient：libsmbclient的PHP包装
+php74-php-wkhtmltox：HTML转换器
+php74-php-pecl-cmark：CommonMark扩展名
+php74-php-pecl-dbase：dBase数据库文件访问函数
+php74-php-pecl-druid：一个PHP的德鲁伊驱动
+php74-php-pecl-event：提供libevent库的接口
+php74-php-pecl-geoip：将IP地址映射到的扩展名地理位置
+php74-php-pecl-gnupg：x86_64: gpgme库的包装
+php74-php-pecl-mysql：MySQL数据库访问函数
+php74-php-pecl-oauth：PHP OAuth消费者扩展
+php74-php-pecl-parle：x86_64:解析和词法分析
+php74-php-pecl-raphf：资源和持久句柄工厂
+php74-php-pecl-solr2：Apache Solr的API定向对象
+php74-php-pecl-stats：用于统计计算的例程
+php74-php-pecl-stomp：Stomp客户端扩展
+php74-php-pecl-taint：x86_64: XSS代码嗅探器
+php74-php-pecl-xattr：扩展属性
+php74-php-pecl-xdiff：文件差异/补丁
+php74-php-pecl-xxtea：XXTEA加密算法扩展PHP
+php74-php-libvirt-doc：noarch: php-libvirt文件
+php74-php-pecl-base58：用base58编码和解码数据
+php74-php-pecl-bitset：位集库
+php74-php-pecl-crypto：OpenSSL密码库的包装器
+php74-php-pecl-gender：x86_64:性别扩展
+php74-php-pecl-hprose：用于PHP的h散文
+php74-php-pecl-hrtime：x86_64:高分辨率定时
+php74-php-pecl-mcrypt：x86_64: libmcrypt库的绑定
+php74-php-pecl-pdflib：生成PDF文件的包
+php74-php-pecl-propro：属性代理
+php74-php-pecl-radius：Radius客户端库
+php74-php-pecl-redis4：的扩展名 Redis键值存储
+php74-php-pecl-redis5：的扩展名 Redis键值存储
+php74-php-pecl-scrypt：Scrypt散列函数
+php74-php-pecl-sphinx：Sphinx SQL全文的PECL扩展搜索引擎
+php74-php-pecl-ssdeep：libfuzzy库的包装器
+php74-php-pecl-trader：为贸易商提供技术分析
+php74-php-pecl-xdebug：用于调试PHP脚本的PECL包
+php74-php-pecl-xhprof：x86_64: XHProf的PHP扩展，层次结构分析器
+php74-php-pecl-yaconf：x86_64:另一个配置容器
+php74-php-pecl-apcu-bc：APCu向后兼容模块
+php74-php-pecl-decimal：任意精度浮点小数
+php74-php-pecl-gearman：PHP包装器到libgearman
+php74-php-pecl-gmagick：的包装器GraphicsMagick库
+php74-php-pecl-imagick：x86_64:用于创建和修改映像的扩展使用ImageMagick
+php74-php-pecl-inotify：x86_64: Inotify
+php74-php-pecl-leveldb：LevelDB PHP绑定
+php74-php-pecl-memprof：x86_64:内存使用分析器
+php74-php-pecl-mongodb：x86_64:用于PHP的MongoDB驱动程序
+php74-php-pecl-msgpack：用于与MessagePack通信的API序列化
+php74-php-pecl-rdkafka：基于librdkafka的Kafka客户端
+php74-php-pecl-rpminfo：x86_64: RPM信息
+php74-php-pecl-runkit7：为了这些你…不应该…无论如何我一直在做……但是肯定做的<span class="token operator">!</span>
+php74-php-pecl-seaslog：一个有效、快速、稳定的日志 PHP扩展
+php74-php-pecl-selinux：用于PHP脚本的SELinux绑定语言
+php74-php-pecl-swoole4：PHP的异步并发分布式网络框架
+php74-php-pecl-timecop：x86_64:时间旅行和冻结扩展
+php74-php-pecl-varnish：Varnish缓存绑定
+php74-php-pecl-xmldiff：x86_64: XML差异和合并
+php74-php-pecl-igbinary：x86_64:替代标准PHP序列化器
+php74-php-pecl-memcache：x86_64:使用Memcached的扩展缓存守护进程
+php74-php-pecl-mogilefs：要与之通信的PHP客户端库 MogileFS存储
+php74-php-pecl-mustache：Mustache模板语言
+php74-php-pecl-protobuf：序列化结构化的机制数据
+php74-php-pecl-rdkafka4：基于librdkafka的Kafka客户端
+php74-php-pecl-scoutapm：本地扩展组件 ScoutAPM的PHP代理
+php74-php-pecl-translit：将非拉丁字符音译设置为拉丁文
+php74-php-snuffleupagus：x86_64: PHP的安全模块
+php74-php-zephir-parser：x86_64: Zephir解析器扩展
+php74-php-pecl-cassandra：用于Apache的DataStax PHP驱动程序卡桑德拉
+php74-php-pecl-json-post：JSON POST处理程序
+php74-php-pecl-mailparse：用于解析和的PHP PECL包处理电子邮件消息
+php74-php-pecl-memcached：x86_64:使用Memcached的扩展缓存守护进程
+php74-php-pecl-mosquitto：libmosquito - to的扩展
+php74-php-pecl-seasclick：一个Yandex ClickHouse客户端驱动 PHP扩展
+php74-php-pecl-xlswriter：一个高效、快速的xlsx文件出口扩展
+php74-php-horde-horde-lz4：Horde LZ4压缩扩展
+php74-php-pecl-apcu-devel：APCu开发人员文件<span class="token punctuation">(</span>头文件<span class="token punctuation">)</span>
+php74-php-pecl-couchbase2：Couchbase服务器PHP扩展
+php74-php-pecl-geospatial：PHP扩展来处理公共地理空间功能
+php74-php-pecl-handlebars：Handlebars模板语言
+php74-php-pecl-http-devel：x86_64:扩展HTTP支持开发人员文件<span class="token punctuation">(</span>头<span class="token punctuation">)</span>
+php74-php-pecl-krb5-devel：Kerberos扩展开发人员文件<span class="token punctuation">(</span>头<span class="token punctuation">)</span>
+php74-php-pecl-luasandbox：带有限制和安全的Lua解释器环境
+php74-php-pecl-opencensus：一个stats集合和分布式跟踪框架
+php74-php-pecl-skywalking：x86_64: Apache的PHP工具代理人行天桥
+php74-php-pecl-ahocorasick：有效的Aho-Corasick字符串模式匹配算法
+php74-php-pecl-ip2location：获取an的地理位置信息IP地址
+php74-php-pecl-http-message：x86_64: PSR-7 HTTP消息实现
+php74-php-pecl-datadog-trace：APM和分布式跟踪PHP
+php74-php-pecl-hdr-histogram：x86_64: C语言的PHP扩展包装hdrhistogram API
+php74-php-pecl-imagick-devel：imagick扩展开发人员文件<span class="token punctuation">(</span>头<span class="token punctuation">)</span>
+php74-php-pecl-msgpack-devel：MessagePack开发人员文件<span class="token punctuation">(</span>头<span class="token punctuation">)</span>
+php74-php-pecl-mysql-xdevapi：MySQL数据库访问函数
+php74-php-pecl-mysqlnd-azure：x86_64: mysqlnd的重定向插件
+php74-php-pecl-igbinary-devel：Igbinary开发人员文件<span class="token punctuation">(</span>头<span class="token punctuation">)</span>
+php74-php-pecl-uploadprogress：x86_64:跟踪进度的扩展文件上传
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br></div></div><p>其中的 <code>php74-php.x86_64</code>为7.4这个大版本的主包，其他皆为依赖，如果想要安装redis依赖，则可以直接运行如下命令：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>yum <span class="token function">install</span> -y php74-php-pecl-redis4.x86_64 php74-php-pecl-redis5.x86_64
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>这样就安装完成了。</p><p><img src="http://t.eryajf.net/imgs/2021/09/c7c4619ec71b3913.jpg" alt="1e1a3e4ef34f9dc53ee5d2f159530d28"></p><h3 id="_2-直接安装" tabindex="-1"><a class="header-anchor" href="#_2-直接安装" aria-hidden="true">#</a> 2，直接安装</h3><p>这个时候可以先梳理下自己所需要的依赖，然后找到依赖对应的RPM包，直接安装即可：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>yum <span class="token function">install</span> -y yum-utils php74-php.x86_64
+yum <span class="token function">install</span> -y php74-php-fpm.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-zip.x86_64
+yum <span class="token function">install</span> -y php74-php-opcache.x86_64
+yum <span class="token function">install</span> -y php74-php-gd.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-yaf.x86_64
+yum <span class="token function">install</span> -y php74-php-xmlrpc.x86_64 php74-php-xml.x86_64 php74-php-pecl-xmldiff.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-xhprof.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-msgpack.x86_64
+yum <span class="token function">install</span> -y php74-php-bcmath.x86_64
+yum <span class="token function">install</span> -y php74-php-gmp.x86_64
+yum <span class="token function">install</span> -y php74-php-mbstring.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-mcrypt.x86_64
+yum <span class="token function">install</span> -y php74-php-mysqlnd.x86_64
+yum <span class="token function">install</span> -y php74-php-soap.x86_64
+yum <span class="token function">install</span> -y php74-php-sodium.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-amqp.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-mongodb.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-redis4.x86_64 php74-php-pecl-redis5.x86_64
+yum <span class="token function">install</span> -y php74-php-process.x86_64
+yum <span class="token function">install</span> -y php74-php-pecl-swoole4.x86_64
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_3-配置说明" tabindex="-1"><a class="header-anchor" href="#_3-配置说明" aria-hidden="true">#</a> 3，配置说明</h3><p>注意使用如上方式安装PHP之后，一些配置目录与我们往常使用习惯略有不同，这里简作说明：</p><ul><li>安装目录：<code>/opt/remi/php74</code></li><li>配置文件目录：<code>/etc/opt/remi/php74/</code></li><li>运行时目录：<code>/var/opt/remi/php74/</code></li><li>二进制路径：<code>/usr/bin/php74</code></li><li>依赖目录：<code>/opt/remi/php74/root/lib64/php/modules/</code></li><li>依赖配置文件：<code>/etc/opt/remi/php74/php.d/</code></li><li>启动管理文件：<code>/usr/lib/systemd/system/php74-php-fpm.service</code></li></ul><p>安装之后按照往常使用习惯，我们将做一些调整：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 将配置文件软链到/usr/local</span>
+<span class="token function">ln</span> -snf /etc/opt/remi/php74 /usr/local/php74
+<span class="token comment"># 将PHP二进制命令调整成php</span>
+<span class="token function">ln</span> -snf /usr/bin/php74 /usr/bin/php
+<span class="token comment"># 将启动文件名字进行调整</span>
+<span class="token function">mv</span> /usr/lib/systemd/system/php74-php-fpm.service /usr/lib/systemd/system/php74-fpm.service
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>然后是针对主配置文件<code>www.conf</code>的一些调整，这个就每个公司各有不同，根据自己的需求来调整即可。</p><ul><li>不过如果要使用默认配置的话，注意默认配置文件中，PHP使用apach用户启动的。</li><li>因为我这边老版本差距不大，因此直接将老PHP的www.conf，php-fpm.conf覆盖掉新的，然后直接重启即可。</li></ul><h3 id="_4-问题记录" tabindex="-1"><a class="header-anchor" href="#_4-问题记录" aria-hidden="true">#</a> 4，问题记录</h3><p>问题一：如何往PHP里添加变量？</p><p>使用过程中，发现了一个奇怪的问题，我们有一个需求是打印日志会通过读取一个变量进行环境区分：</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>env<span class="token punctuation">[</span>NAMESPACE<span class="token punctuation">]</span><span class="token operator">=</span>prod
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>以往的姿势是将该配置放到：<code>/usr/local/php74/php-fpm.conf</code>,但是现在放到里边总是报错：<code>Array are not allowed in the global section</code>，后来发现需要放到 <code>/usr/local/php74/php-fpm.d/www.conf</code>，然后再重启就可以了。</p><p>问题二：如何安装指定小版本的PHP？</p><p>目前经试验发现只能安装对应大版本(比如7.3或者7.4)的最新的小版本，而不能指定小版本安装，比如7.4.15等，如果你有安装指定小版本的版本，欢迎在评论区进行分享！</p><!--]--></div><footer class="page-meta"><div class="meta-item edit-link"><a class="nav-link external meta-item-label" href="https://github.com/eryajf/eryajf.github.io/edit/main/01.运维观止/05.Php/07.使用yum-remi部署PHP及其依赖.md" rel="noopener noreferrer" target="_blank" aria-label="在 GitHub 上编辑此页"><!--[--><!--]--> 在 GitHub 上编辑此页 <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="meta-item last-updated"><span class="meta-item-label">上次更新: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: fengxuechao@tal.com">fengxuechao</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="./assets/app.dbf5d933.js" defer></script>
+  </body>
+</html>

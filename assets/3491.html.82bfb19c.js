@@ -1,0 +1,39 @@
+import{e as n}from"./app.dbf5d933.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const a={},p=n(`<p>\u5F88\u591A\u65F6\u5019\uFF0C\u5728\u6784\u5EFA\u7684\u8FC7\u7A0B\u4E2D\uFF0C\u6211\u4EEC\u4F1A\u53D6\u7CFB\u7EDF\u5F53\u524D\u65F6\u95F4\u6233\u4F5C\u4E3A\u4E00\u4E2A\u53C2\u7167\uFF0C\u878D\u5165\u5230\u6784\u5EFA\u8FC7\u7A0B\u4E2D\uFF0C\u5728\u539F\u6765\u81EA\u7531\u98CE\u683C\u4E2D\uFF0C\u90FD\u662F\u57FA\u4E8ELinux\u7CFB\u7EDF\u7EA7\u522B\u7684 <code>date</code>\u547D\u4EE4\u8FDB\u884C\u7684\u5B9A\u4E49\uFF0C\u73B0\u5728\u6765\u5230\u6D41\u6C34\u7EBF\u91CC\u8FB9\uFF0C\u7A81\u7136\u53D1\u73B0\u60F3\u8981\u5B9A\u4E49\u4E00\u4E2A\u5168\u5C40\u7684\u65F6\u95F4\u6233\u53D8\u91CF\uFF0C\u4F3C\u4E4E\u5E76\u4E0D\u5BB9\u6613\uFF0C\u5C3D\u7BA1\u77E5\u9053\u6D41\u6C34\u7EBF\u811A\u672C\u5C31\u662Fgroovy\u8BED\u8A00\uFF0C\u7136\u800C\u56E0\u4E3A\u4E0D\u4F1A\u5F00\u53D1\uFF0C\u4E00\u65F6\u95F4\u4E5F\u4E0D\u77E5\u9053\u4ECE\u4F55\u4E0B\u624B\uFF0C\u539F\u6765\u7528\u7684\u5982\u4E0B\u65B9\u5F0F\u8FDB\u884C\u83B7\u53D6\u7684\u65F6\u95F4\u6233\uFF1A</p><div class="language-groovy ext-groovy line-numbers-mode"><pre class="language-groovy"><code>pipeline<span class="token punctuation">{</span>
+    agent any
+    stages<span class="token punctuation">{</span>
+        <span class="token function">stage</span><span class="token punctuation">(</span><span class="token string">&#39;timestamp&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            steps <span class="token punctuation">{</span>
+                script <span class="token punctuation">{</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        echo <span class="token string">&#39;========================&#39;</span>
+                        # \u5982\u679C\u60F3\u8981\u5B9A\u4E49\u5E76\u83B7\u53D6\u65F6\u95F4\u6233\u53D8\u91CF\uFF0C\u6700\u597D\u5199\u5230\u8FD9\u91CC\uFF0C\u5B9E\u6D4B\u5199\u5230environment\u662F\u8FDD\u89C4\u7684\u8BED\u6CD5
+                        sh <span class="token string gstring">&quot;version=\`date +%Y%m%d%H%M%S\`&quot;</span>
+                        sh <span class="token string gstring">&quot;printenv&quot;</span>
+                        echo <span class="token string">&#39;========================&#39;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        echo <span class="token string">&#39;========================&#39;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>       
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><img src="http://t.eryajf.net/imgs/2021/09/93f04bae072e7740.jpg" alt="img"></p><p>\u540E\u6765\u7684\u4F7F\u7528\u4E2D\uFF0C\u6DF1\u6DF1\u89C9\u5F97\u8FD9\u79CD\u5B9A\u4E49\u5341\u5206\u4E0D\u65B9\u4FBF\uFF0C\u56E0\u6B64\u4E0D\u6B7B\u5FC3\u7684\u518D\u5230\u7F51\u4E0A\u5404\u79CD\u641C\u7F57\uFF0C\u770B\u4E86\u4E0D\u5C11\u7684\u6848\u4F8B\uFF0C\u4F3C\u4E4E\u4E5F\u90FD\u6CA1\u6709\u627E\u5230\u8BA9\u81EA\u5DF1\u6EE1\u610F\u7684\u7ED3\u679C\uFF0C\u6700\u540E\u5728\u4E00\u4E2A\u793A\u4F8B\u5F53\u4E2D\u627E\u5230\u4E86\uFF0C\u5E76\u505A\u4E86\u4E00\u4E0B\u7B80\u5355\u8C03\u6574\uFF0C\u4ECE\u800C\u7B26\u5408\u81EA\u5DF1\u7684\u9700\u6C42\u3002</p><div class="language-groovy ext-groovy line-numbers-mode"><pre class="language-groovy"><code><span class="token keyword">def</span> <span class="token function">createVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// \u5B9A\u4E49\u4E00\u4E2A\u7248\u672C\u53F7\u4F5C\u4E3A\u5F53\u6B21\u6784\u5EFA\u7684\u7248\u672C\uFF0C\u8F93\u51FA\u7ED3\u679C 20191210175842_69</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">&#39;yyyyMMddHHmmss&#39;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string gstring">&quot;_<span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">{</span>env<span class="token punctuation">.</span>BUILD_ID<span class="token punctuation">}</span></span>&quot;</span>
+<span class="token punctuation">}</span>
+pipeline <span class="token punctuation">{</span>
+    agent any
+    <span class="token comment">// \u53EF\u5728 environment \u5F15\u5165\u4E0A\u8FB9\u5B9A\u4E49\u7684\u51FD\u6570\uFF0C\u4EE5\u4FBF\u4E8E\u5168\u5C40\u8C03\u7528</span>
+    environment <span class="token punctuation">{</span>
+        _version <span class="token operator">=</span> <span class="token function">createVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    stages <span class="token punctuation">{</span>
+        stage <span class="token punctuation">(</span><span class="token string gstring">&quot;test&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            steps <span class="token punctuation">{</span>
+                echo <span class="token punctuation">$</span><span class="token punctuation">{</span>_version<span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>\u8FD9\u6837\u5C31\u5B9E\u73B0\u4E86\u81EA\u5DF1\u60F3\u8981\u7684\u5168\u5C40\u65F6\u95F4\u6233\u53D8\u91CF\u4E86\u3002</p>`,6);function e(t,c){return p}var u=s(a,[["render",e]]);export{u as default};

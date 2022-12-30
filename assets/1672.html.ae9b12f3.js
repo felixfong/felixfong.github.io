@@ -1,0 +1,10 @@
+import{e}from"./app.dbf5d933.js";import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";const s={},t=e(`<p>\u4EE5\u5F80\u5728\u5B66\u4E60\u4E00\u4E9Bgithub\u4E0A\u7684\u5F00\u6E90\u9879\u76EE\u65F6\uFF0C\u90FD\u662F\u76F4\u63A5\u590D\u5236\u4E86\u9879\u76EE\u7684\u5730\u5740\uFF0C\u7136\u540E\u5728\u4E3B\u673A\u4E0Agit clone\u4E00\u4E0B\u5373\u53EF\uFF0C\u7136\u800C\u6700\u8FD1\u53D1\u73B0\u603B\u662F\u62A5\u9519\uFF0C\u62A5\u9519\u5185\u5BB9\u5982\u4E0B\uFF1A</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[root@localhost mnt]$git clone https://github.com/Meituan-Dianping/SQLAdvisor.git
+Cloning into &#39;SQLAdvisor&#39;...
+fatal: unable to access &#39;https://github.com/Meituan-Dianping/SQLAdvisor.git/&#39;: Peer&#39;s Certificate has expired.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>\u8FD9\u4E2A\u65F6\u5019\u89E3\u51B3\u529E\u6CD5\u6709\u4E24\u79CD\u3002</p><p><img src="http://t.eryajf.net/imgs/2021/09/dddc9c172798a2e8.jpg" alt="image"></p><p>\u5176\u4E00\uFF1A\u53EF\u4EE5\u5728github\u5904\u901A\u8FC7\u4E0B\u8F7Dzip\u5305\u7684\u65B9\u5F0F\u8FDB\u884C\u4E0B\u8F7D\u3002</p><p>\u5176\u4E8C\uFF1A\u5C06\u521A\u521A\u8FDE\u63A5\u4E2D\u7684https\u6539\u4E3Agit\u5373\u53EF\u6B63\u5E38\u4E0B\u8F7D\u3002</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[root@localhost mnt]$git clone git://github.com/Meituan-Dianping/SQLAdvisor.git
+Cloning into &#39;SQLAdvisor&#39;...
+remote: Counting objects: 1460, done.
+remote: Total 1460 (delta 0), reused 0 (delta 0), pack-reused 1460
+Receiving objects: 100% (1460/1460), 19.92 MiB | 48.00 KiB/s, done.
+Resolving deltas: 100% (367/367), done.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div>`,7);function a(i,r){return t}var p=n(s,[["render",a]]);export{p as default};
