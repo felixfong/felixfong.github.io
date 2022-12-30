@@ -56,7 +56,7 @@ module.exports = {
                     { text: 'Docker', link: '/ops/pages/1847.html'},
                     { text: 'Ansible', link: '/ops/pages/5173.html'},
                     { text: 'Ldap', link: '/ops/pages/3410.html'},
-                    { text: 'Git', link: '/ops/pages/243.html'},
+                    { text: 'Git', link: '/ops/pages/202208241125/'},
                     { text: 'Kafka', link: '/ops/pages/2951.html'},
                     { text: 'MySQL', link: '/ops/pages/202209081510'},
                     { text: 'Etcd', link: '/ops/pages/4050.html'},
@@ -149,13 +149,13 @@ module.exports = {
                             text: '网络专题',
                             children: [
                                 '/topic/pages/22020104155458/',
-                                '/topic/pages/202207201615/',
                             ],
                         },
                         {
                             text: '为什么专题',
                             children: [
                                 '/topic/pages/202208231454',
+                                '/topic/pages/202207201615/',
                             ],
                         },
                     ],
@@ -237,7 +237,6 @@ module.exports = {
                         // '/ops/pages/1395.html',
                         // '/ops/pages/3158.html',
                         '/ops/pages/211225215940/',
-                        '/ops/pages/243.html',
                         '/ops/pages/202208241125/',
                         '/ops/pages/1497.html',
                         '/ops/pages/5295.html',
