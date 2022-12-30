@@ -56,30 +56,9 @@ module.exports = {
                     { text: 'Docker', link: '/ops/pages/1847.html'},
                     { text: 'Ansible', link: '/ops/pages/5173.html'},
                     { text: 'Ldap', link: '/ops/pages/3410.html'},
-                    { text: 'Git', link: 'Git',
-                        children: [
-                            {
-                                text: 'Git',
-                                children: [
-                                    '/ops/pages/243.html',
-                                    '/ops/pages/202208241125/',
-                                ],
-                            },
-                        ],
-                    },
+                    { text: 'Git', link: '/ops/pages/243.html'},
                     { text: 'Kafka', link: '/ops/pages/2951.html'},
-                    { text: 'MySQL', link: '/mysql/',
-                        children: [
-                            {
-                                text: 'MySQL',
-                                children: [
-                                    '/ops/pages/1497.html',
-                                    '/ops/pages/5295.html',
-                                    '/ops/pages/202209081510',
-                                ],
-                            },
-                        ],
-                    },
+                    { text: 'MySQL', link: '/ops/pages/202209081510'},
                     { text: 'Etcd', link: '/ops/pages/4050.html'},
                     { text: 'Other', link: '/ops/pages/285.html'},
                 ]
@@ -163,20 +142,20 @@ module.exports = {
                             text: 'Go',
                             children: [
                                 '/topic/pages/220101204130/',
-                                '/topic/pages/211231234959/'
+                                '/topic/pages/211231234959/',
                             ],
                         },
                         {
                             text: '网络专题',
                             children: [
                                 '/topic/pages/22020104155458/',
-                                'topic/pages/202207201615/'
+                                '/topic/pages/202207201615/',
                             ],
                         },
                         {
                             text: '为什么专题',
                             children: [
-                                'topic/pages/202208231454',
+                                '/topic/pages/202208231454',
                             ],
                         },
                     ],
@@ -188,7 +167,7 @@ module.exports = {
                     children: [
                         '/weekly/pages/11c668/',
                         '/weekly/pages/211225232834/',
-                        '/weekly/pages/220103181312/'
+                        '/weekly/pages/220103181312/',
                     ],
                 },
             ],
@@ -257,7 +236,12 @@ module.exports = {
                         // '/ops/pages/027a17/',
                         // '/ops/pages/1395.html',
                         // '/ops/pages/3158.html',
-                        '/ops/pages/211225215940/'
+                        '/ops/pages/211225215940/',
+                        '/ops/pages/243.html',
+                        '/ops/pages/202208241125/',
+                        '/ops/pages/1497.html',
+                        '/ops/pages/5295.html',
+                        '/ops/pages/202209081510',
                     ],
                 },
                 {
