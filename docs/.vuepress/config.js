@@ -56,8 +56,30 @@ module.exports = {
                     { text: 'Docker', link: '/ops/pages/1847.html'},
                     { text: 'Ansible', link: '/ops/pages/5173.html'},
                     { text: 'Ldap', link: '/ops/pages/3410.html'},
-                    { text: 'Gitlab', link: '/ops/pages/243.html'},
+                    { text: 'Git', link: 'Git',
+                        children: [
+                            {
+                                text: 'Git',
+                                children: [
+                                    '/ops/pages/243.html',
+                                    '/ops/pages/202208241125/',
+                                ],
+                            },
+                        ],
+                    },
                     { text: 'Kafka', link: '/ops/pages/2951.html'},
+                    { text: 'MySQL', link: '/mysql/',
+                        children: [
+                            {
+                                text: 'MySQL',
+                                children: [
+                                    '/ops/pages/1497.html',
+                                    '/ops/pages/5295.html',
+                                    '/ops/pages/202209081510',
+                                ],
+                            },
+                        ],
+                    },
                     { text: 'Etcd', link: '/ops/pages/4050.html'},
                     { text: 'Other', link: '/ops/pages/285.html'},
                 ]
@@ -151,6 +173,12 @@ module.exports = {
                                 'topic/pages/202207201615/'
                             ],
                         },
+                        {
+                            text: '为什么专题',
+                            children: [
+                                'topic/pages/202208231454',
+                            ],
+                        },
                     ],
                 },
             ],
@@ -205,6 +233,8 @@ module.exports = {
                                         '/code/pages/5114.html',
                                         '/code/pages/2bf6c3/',
                                         '/code/pages/9f51d6/',
+                                        '/code/pages/20221115150000/',
+                                        '/code/pages/20221230100000/',
                                     ],
                                 },
                                 {
